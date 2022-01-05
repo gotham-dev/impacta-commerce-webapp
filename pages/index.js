@@ -1,209 +1,237 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Impacta Commerce</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta charset="utf-8"></meta>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        ></meta>
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous"
+        />
       </Head>
 
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <div>
+        <div className="container-fluid py-4">
+          <nav className="navbar navbar-expand-lg navbar-light border">
+            <div className="container-fluid">
+              <a className="navbar-brand" href="#">
+                Impacta Commerce
+              </a>
+              <button
+                className="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span className="navbar-toggler-icon"></span>
+              </button>
+              <div className="collapse navbar-collapse">
+                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li className="nav-item">
+                    <a className="nav-link active" aria-current="page" href="#">
+                      PRODUTOS
+                    </a>
+                  </li>
+                </ul>
+                <ul class="nav justify-content-end">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                      CARRINHO DE COMPRAS
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div className="p-5 mb-4 bg-light rounded-3">
+            <div className="container-fluid py-5">
+              <h1 className="display-5 fw-bold">Impacta Commerce</h1>
+              {/* <p className="col-md-8 fs-4">
+              Using a series of utilities, you can create this jumbotron, just
+              like the one in previous versions of Bootstrap. Check out the
+              examples below for how you can remix and restyle it to your
+              liking.
+            </p> */}
+              {/* <button className="btn btn-primary btn-lg" type="button">
+              Example button
+            </button> */}
+            </div>
+          </div>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+          <form className="row g-3">
+            <div class="col">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Buscar produtos, marcas e muito mais..."
+              />
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary">
+                Buscar
+              </button>
+            </div>
+          </form>
+          {/* Product list */}
+          <div className="py-3">
+            
+            {/* Item line */}
+            <div class="d-flex position-relative border my-2">
+              <img
+                src="https://via.placeholder.com/150"
+                class="flex-shrink-0 me-3"
+                alt="..."
+              />
+              <div>
+                <a href="#prod1" class="stretched-link">
+                  <h3 class="mt-0">Caneca Personalizada de Porcelana</h3>
+                </a>
+                <h4>R$ 123,45</h4>
+                <p>em 3x de R$ 41,15 sem juros</p>
+              </div>
+            </div>
+            
+            
+            {/* Item line */}
+            <div class="d-flex position-relative border my-2">
+              <img
+                src="https://via.placeholder.com/150"
+                class="flex-shrink-0 me-3"
+                alt="..."
+              />
+              <div>
+                <a href="#prod1" class="stretched-link">
+                  <h3 class="mt-0">Caneca Personalizada de Porcelana</h3>
+                </a>
+                <h4>R$ 123,45</h4>
+                <p>em 3x de R$ 41,15 sem juros</p>
+              </div>
+            </div>
+            
+            {/* Item line */}
+            <div class="d-flex position-relative border my-2">
+              <img
+                src="https://via.placeholder.com/150"
+                class="flex-shrink-0 me-3"
+                alt="..."
+              />
+              <div>
+                <a href="#prod1" class="stretched-link">
+                  <h3 class="mt-0">Caneca Personalizada de Porcelana</h3>
+                </a>
+                <h4>R$ 123,45</h4>
+                <p>em 3x de R$ 41,15 sem juros</p>
+              </div>
+            </div>
+            
+            {/* Item line */}
+            <div class="d-flex position-relative border my-2">
+              <img
+                src="https://via.placeholder.com/150"
+                class="flex-shrink-0 me-3"
+                alt="..."
+              />
+              <div>
+                <a href="#prod1" class="stretched-link">
+                  <h3 class="mt-0">Caneca Personalizada de Porcelana</h3>
+                </a>
+                <h4>R$ 123,45</h4>
+                <p>em 3x de R$ 41,15 sem juros</p>
+              </div>
+            </div>
+            
+            {/* Item line */}
+            <div class="d-flex position-relative border my-2">
+              <img
+                src="https://via.placeholder.com/150"
+                class="flex-shrink-0 me-3"
+                alt="..."
+              />
+              <div>
+                <a href="#prod1" class="stretched-link">
+                  <h3 class="mt-0">Caneca Personalizada de Porcelana</h3>
+                </a>
+                <h4>R$ 123,45</h4>
+                <p>em 3x de R$ 41,15 sem juros</p>
+              </div>
+            </div>
+            
+            {/* Item line */}
+            <div class="d-flex position-relative border my-2">
+              <img
+                src="https://via.placeholder.com/150"
+                class="flex-shrink-0 me-3"
+                alt="..."
+              />
+              <div>
+                <a href="#prod1" class="stretched-link">
+                  <h3 class="mt-0">Caneca Personalizada de Porcelana</h3>
+                </a>
+                <h4>R$ 123,45</h4>
+                <p>em 3x de R$ 41,15 sem juros</p>
+              </div>
+            </div>
+            
+            {/* Item line */}
+            <div class="d-flex position-relative border my-2">
+              <img
+                src="https://via.placeholder.com/150"
+                class="flex-shrink-0 me-3"
+                alt="..."
+              />
+              <div>
+                <a href="#prod1" class="stretched-link">
+                  <h3 class="mt-0">Caneca Personalizada de Porcelana</h3>
+                </a>
+                <h4>R$ 123,45</h4>
+                <p>em 3x de R$ 41,15 sem juros</p>
+              </div>
+            </div>
+            
+            {/* Item line */}
+            <div class="d-flex position-relative border my-2">
+              <img
+                src="https://via.placeholder.com/150"
+                class="flex-shrink-0 me-3"
+                alt="..."
+              />
+              <div>
+                <a href="#prod1" class="stretched-link">
+                  <h3 class="mt-0">Caneca Personalizada de Porcelana</h3>
+                </a>
+                <h4>R$ 123,45</h4>
+                <p>em 3x de R$ 41,15 sem juros</p>
+              </div>
+            </div>
 
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            {/* Page nav */}
+            <div className="row text-center py-5">
+              <div className="col">
+                <span>&#8592; Anterior </span>
+              </div>
+              <div className="col">
+                <span>1 de 10</span>
+              </div>
+              <div className="col">
+                <span> Seguinte &#8594;</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
+      </div>
     </div>
-  )
+  );
 }
