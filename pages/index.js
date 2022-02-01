@@ -1,4 +1,18 @@
 import Head from "next/head";
+import ProductsForSaleList from "./components/ProductsForSaleList";
+
+const products = [
+  {
+    title: "Caneca Personalizada de Porcelana",
+    amount: 123.45,
+    installments: { number: 3, total: 41.15, hasFee: true },
+  },
+  {
+    title: "Caneca de Tulipa",
+    amount: 123.45,
+    installments: { number: 3, total: 41.15 },
+  },
+];
 
 export default function Home() {
   return (
@@ -45,9 +59,9 @@ export default function Home() {
                     </a>
                   </li>
                 </ul>
-                <ul class="nav justify-content-end">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">
+                <ul className="nav justify-content-end">
+                  <li className="nav-item">
+                    <a className="nav-link active" aria-current="page" href="#">
                       CARRINHO DE COMPRAS
                     </a>
                   </li>
@@ -71,151 +85,22 @@ export default function Home() {
           </div>
 
           <form className="row g-3">
-            <div class="col">
+            <div className="col">
               <input
                 type="text"
                 className="form-control"
                 placeholder="Buscar produtos, marcas e muito mais..."
               />
             </div>
-            <div class="col-auto">
-              <button type="submit" class="btn btn-primary">
+            <div className="col-auto">
+              <button type="submit" className="btn btn-primary">
                 Buscar
               </button>
             </div>
           </form>
           {/* Product list */}
           <div className="py-3">
-            
-            {/* Item line */}
-            <div class="d-flex position-relative border my-2">
-              <img
-                src="https://via.placeholder.com/150"
-                class="flex-shrink-0 me-3"
-                alt="..."
-              />
-              <div>
-                <a href="#prod1" class="stretched-link">
-                  <h3 class="mt-0">Caneca Personalizada de Porcelana</h3>
-                </a>
-                <h4>R$ 123,45</h4>
-                <p>em 3x de R$ 41,15 sem juros</p>
-              </div>
-            </div>
-            
-            
-            {/* Item line */}
-            <div class="d-flex position-relative border my-2">
-              <img
-                src="https://via.placeholder.com/150"
-                class="flex-shrink-0 me-3"
-                alt="..."
-              />
-              <div>
-                <a href="#prod1" class="stretched-link">
-                  <h3 class="mt-0">Caneca Personalizada de Porcelana</h3>
-                </a>
-                <h4>R$ 123,45</h4>
-                <p>em 3x de R$ 41,15 sem juros</p>
-              </div>
-            </div>
-            
-            {/* Item line */}
-            <div class="d-flex position-relative border my-2">
-              <img
-                src="https://via.placeholder.com/150"
-                class="flex-shrink-0 me-3"
-                alt="..."
-              />
-              <div>
-                <a href="#prod1" class="stretched-link">
-                  <h3 class="mt-0">Caneca Personalizada de Porcelana</h3>
-                </a>
-                <h4>R$ 123,45</h4>
-                <p>em 3x de R$ 41,15 sem juros</p>
-              </div>
-            </div>
-            
-            {/* Item line */}
-            <div class="d-flex position-relative border my-2">
-              <img
-                src="https://via.placeholder.com/150"
-                class="flex-shrink-0 me-3"
-                alt="..."
-              />
-              <div>
-                <a href="#prod1" class="stretched-link">
-                  <h3 class="mt-0">Caneca Personalizada de Porcelana</h3>
-                </a>
-                <h4>R$ 123,45</h4>
-                <p>em 3x de R$ 41,15 sem juros</p>
-              </div>
-            </div>
-            
-            {/* Item line */}
-            <div class="d-flex position-relative border my-2">
-              <img
-                src="https://via.placeholder.com/150"
-                class="flex-shrink-0 me-3"
-                alt="..."
-              />
-              <div>
-                <a href="#prod1" class="stretched-link">
-                  <h3 class="mt-0">Caneca Personalizada de Porcelana</h3>
-                </a>
-                <h4>R$ 123,45</h4>
-                <p>em 3x de R$ 41,15 sem juros</p>
-              </div>
-            </div>
-            
-            {/* Item line */}
-            <div class="d-flex position-relative border my-2">
-              <img
-                src="https://via.placeholder.com/150"
-                class="flex-shrink-0 me-3"
-                alt="..."
-              />
-              <div>
-                <a href="#prod1" class="stretched-link">
-                  <h3 class="mt-0">Caneca Personalizada de Porcelana</h3>
-                </a>
-                <h4>R$ 123,45</h4>
-                <p>em 3x de R$ 41,15 sem juros</p>
-              </div>
-            </div>
-            
-            {/* Item line */}
-            <div class="d-flex position-relative border my-2">
-              <img
-                src="https://via.placeholder.com/150"
-                class="flex-shrink-0 me-3"
-                alt="..."
-              />
-              <div>
-                <a href="#prod1" class="stretched-link">
-                  <h3 class="mt-0">Caneca Personalizada de Porcelana</h3>
-                </a>
-                <h4>R$ 123,45</h4>
-                <p>em 3x de R$ 41,15 sem juros</p>
-              </div>
-            </div>
-            
-            {/* Item line */}
-            <div class="d-flex position-relative border my-2">
-              <img
-                src="https://via.placeholder.com/150"
-                class="flex-shrink-0 me-3"
-                alt="..."
-              />
-              <div>
-                <a href="#prod1" class="stretched-link">
-                  <h3 class="mt-0">Caneca Personalizada de Porcelana</h3>
-                </a>
-                <h4>R$ 123,45</h4>
-                <p>em 3x de R$ 41,15 sem juros</p>
-              </div>
-            </div>
-
+            <ProductsForSaleList />
 
             {/* Page nav */}
             <div className="row text-center py-5">
