@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 function Installment(props) {
   const fees = props.installment.hasFee ? "com juros" : "sem juros";
@@ -16,9 +17,11 @@ function ProductListItem(props) {
     <div className="d-flex position-relative border my-2">
       <img src={defaultProductImage} className="flex-shrink-0 me-3" />
       <div>
-        <a href="#" className="stretched-link">
-          <h3 className="mt-0">{props.product.title}</h3>
-        </a>
+        <Link href={`/products/${props.product.code}`}>
+          <a className="stretched-link">
+            <h3 className="mt-0">{props.product.title}</h3>
+          </a>
+        </Link>
         <h4>R$ {props.product.amount}</h4>
         <Installment installment={props.product.installments} />
       </div>
@@ -39,11 +42,13 @@ function ProductsForSaleList() {
           setIsLoaded(true);
           json = [
             {
+              code: "8C9F552D-D22C-4B76-AAF6-233F806F6484",
               title: "Caneca Personalizada de Porcelana",
               amount: 123.45,
               installments: { number: 3, total: 41.15, hasFee: true },
             },
             {
+              code: "ED1F26D1-81B2-424E-A79F-DA74E9DDBAB7",
               title: "Caneca de Tulipa",
               amount: 123.45,
               installments: { number: 3, total: 41.15 },
@@ -63,7 +68,9 @@ function ProductsForSaleList() {
   } else if (!isLoaded) {
     return <div>Loading...</div>;
   } else {
-    const p = products.map((x, index) => <ProductListItem product={x} key={index} />);
+    const p = products.map((x, index) => (
+      <ProductListItem product={x} key={index} />
+    ));
     return <div>{p}</div>;
   }
 }
