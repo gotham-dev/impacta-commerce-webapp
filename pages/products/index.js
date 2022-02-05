@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Menu from "../../components/Menu";
-import ProductsForSaleList from "../../components/ProductsForSaleList";
+import FilterableProductsForSaleList from "../../components/FilterableProductsForSaleList";
 import Layout from "../../components/Layout";
 
 const products = [
@@ -36,23 +36,8 @@ function ProductsForSalePage() {
         </div>
       </div>
 
-      <form className="row g-3">
-        <div className="col">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Buscar produtos, marcas e muito mais..."
-          />
-        </div>
-        <div className="col-auto">
-          <button type="submit" className="btn btn-primary">
-            Buscar
-          </button>
-        </div>
-      </form>
-      {/* Product list */}
       <div className="py-3">
-        <ProductsForSaleList />
+        <FilterableProductsForSaleList />
 
         {/* Page nav */}
         <div className="row text-center py-5">
