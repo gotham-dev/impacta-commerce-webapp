@@ -27,6 +27,13 @@ function Menu() {
                 </a>
               </Link>
             </li>
+            <li className="nav-item">
+              <Link href="/orders">
+                <a className="nav-link active" aria-current="page">
+                  PEDIDOS
+                </a>
+              </Link>
+            </li>
           </ul>
           <ul className="nav justify-content-end">
             <li className="nav-item">

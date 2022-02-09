@@ -1,4 +1,5 @@
 import ItemQuantity from "./ItemQuantity";
+import { currency } from "../../libs/formatters";
 
 function Item(props) {
   const defaultProductImage = "https://via.placeholder.com/150";
@@ -23,7 +24,7 @@ function Item(props) {
           />
         </div>
         <div className="col-2 py-5 text-end">
-          <h4>R$ {props.product.unitPrice * props.product.qty}</h4>
+          <h4>{currency(props.product.unitPrice * props.product.qty)}</h4>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { queryProducts } from "../api/api";
+import { queryProducts } from "../libs/api";
+import { currency } from "../libs/formatters";
 
 function Installment(props) {
   const fees = props.installment.hasFee ? "com juros" : "sem juros";
@@ -23,7 +24,7 @@ function ProductListItem(props) {
             <h3 className="mt-0">{props.product.title}</h3>
           </a>
         </Link>
-        <h4>R$ {props.product.amount}</h4>
+        <h4>{currency(props.product.amount)}</h4>
         <Installment installment={props.product.installments} />
       </div>
     </div>
@@ -42,8 +43,8 @@ function SearchBar(props) {
   }
 
   function handleKeyDown(e) {
-    if (e.key === 'Enter') {
-      searchProducts()
+    if (e.key === "Enter") {
+      searchProducts();
     }
   }
 

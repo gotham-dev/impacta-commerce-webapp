@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import ItemsList from "./ItemsList";
 import Summary from "./Summary";
-import { getCart, updateCart } from "../../api/api";
+import { getCart, updateCart } from "../../libs/api";
 
 const FIXED_CART_CODE = "fixed-cart-code";
 
