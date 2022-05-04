@@ -19,11 +19,11 @@ export async function updateCart(code, products) {
 }
 
 export async function listOrders() {
-  return axios.get("${API}/orders");
+  return axios.get(`${API}/orders`);
 }
 
 export async function closeOrder(cart_code) {
-  return axios.post("${API}/orders/", { cart_code: cart_code });
+  return axios.post(`${API}/orders/`, { cart_code: cart_code });
 }
 
 export async function getOrder(id) {

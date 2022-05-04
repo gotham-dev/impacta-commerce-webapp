@@ -34,7 +34,7 @@ function orderResultsPage(props) {
           <div className="col-8 text-center">
             <p>O seu pedido foi finalizado com sucesso.</p>
             <table className="table table-bordered table-responsive">
-              <thead class="table-light">
+              <thead className="table-light">
                 <tr>
                   <th>Id</th>
                   <th>Status</th>
@@ -51,7 +51,7 @@ function orderResultsPage(props) {
             </table>
 
             <table className="table table-bordered table-responsive">
-              <thead class="table-light">
+              <thead className="table-light">
                 <tr>
                   <th>Produtos</th>
                   <th>Qtde</th>

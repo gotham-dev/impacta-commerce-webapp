@@ -38,7 +38,7 @@ function OrderTable(props) {
   return (
     <table className="table table-bordered table-responsive">
       <caption>Todos os pedidos do sistema</caption>
-      <thead class="table-light">
+      <thead className="table-light">
         <OrderHead />
       </thead>
       <tbody>{rows}</tbody>
